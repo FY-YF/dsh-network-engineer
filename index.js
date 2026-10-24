@@ -2,7 +2,7 @@
  * 网络工程师助手 for DeepSeek Harness.
  *
  * Registers the bundled `network-command-kb` skill on `ctx.skills`: the skill
- * instructs the agent to search the 32 command reference documents shipped in
+ * instructs the agent to search the 40 command reference documents shipped in
  * this package's `kb/` directory, and the harness resolves the skill's base
  * directory at load time, so the knowledge base stays portable with the
  * plugin. The companion "网络工程师助手" agent preset is declared in

@@ -1,15 +1,16 @@
 # 网络工程师知识库（随 dsh-network-engineer 插件分发）
 
-供「网络工程师助手」Agent 及各类 RAG 平台使用的四厂商交换机/路由器命令知识库。资料来源：Tavily 搜集的官方手册与高可信技术社区页面（每篇文档末尾附来源链接），整理日期 2026-10-15。
+供「网络工程师助手」Agent 及各类 RAG 平台使用的五厂商交换机/路由器命令知识库。资料来源：Tavily 搜集的官方手册与高可信技术社区页面（每篇文档末尾附来源链接），整理日期 2026-10-15；思科部分为 2026-10-24 新增，来源为 cisco.com 官方配置指南。
 
 ## 目录结构
 
 ```
 kb/
-├── huawei/    华为（VRP）
-├── h3c/       新华三（Comware V5/V7）
-├── ruijie/    锐捷（RGOS，Cisco 风格）
-├── dptech/    迪普（DPtech 自有 CLI）
+├── cisco/    思科（IOS / IOS XE）
+├── huawei/   华为（VRP）
+├── h3c/      新华三（Comware V5/V7）
+├── ruijie/   锐捷（RGOS，Cisco 风格）
+├── dptech/   迪普（DPtech 自有 CLI）
 └── README.md
 ```
 
@@ -27,6 +28,18 @@ kb/
 | 08 | -remote-diagnostics | 远程管理与诊断（Telnet/SSH、show/display 排障） |
 
 完整文件名格式：`<厂商>-<编号>-<主题>.md`，如 `kb/huawei/huawei-06-ospf.md`。
+
+## 厂家与规模
+
+| 目录 | 厂商 | 操作系统 | 篇数 | 主要来源 |
+|---|---|---|---|---|
+| `cisco/` | 思科 Cisco | IOS / IOS XE | 8 | cisco.com 配置指南 |
+| `huawei/` | 华为 Huawei | VRP | 8 | 官方文档与社区整理 |
+| `h3c/` | 新华三 H3C | Comware V5/V7 | 8 | 官方文档与社区整理 |
+| `ruijie/` | 锐捷 Ruijie | RGOS | 8 | 官方文档与社区整理 |
+| `dptech/` | 迪普 DPtech | 自有 CLI | 8 | 公开资料（有限） |
+
+合计 40 篇、5 家厂商、8 个主题。
 
 ## 文档格式
 
@@ -54,7 +67,7 @@ kb/
 ## 检索与使用建议
 
 1. Agent 回答前先按「厂商 + 主题」定位文件，再按关键词跨文件检索。
-2. 跨厂商对照类问题，同时召回 2–4 篇同名主题文档（如四家的 `*-05-static-route.md`）。
+2. 跨厂商对照类问题，同时召回 2–4 篇同名主题文档（如五家的 `*-05-static-route.md`）。
 3. `verified: medium` 的文档（尤其 dptech/）仅作参考方向，关键配置务必引导用户以官方手册为准。
 
 ## 已知限制与更新

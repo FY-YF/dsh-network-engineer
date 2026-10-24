@@ -1,7 +1,7 @@
 {
   "name": "dsh-network-engineer",
-  "version": "0.1.0",
-  "description": "网络工程师助手 for DeepSeek Harness：迪普/新华三/华为/锐捷交换机路由器命令知识库（32 篇）+ 可切换预设 Agent，支持跨厂商对照、截图识别与联网查手册",
+  "version": "0.2.0",
+  "description": "网络工程师助手 for DeepSeek Harness：思科/华为/新华三/锐捷/迪普交换机路由器命令知识库（40 篇）+ 可切换预设 Agent，支持跨厂商对照、截图识别与联网查手册",
   "type": "module",
   "main": "index.js",
   "files": [
@@ -22,6 +22,7 @@
     "huawei",
     "h3c",
     "ruijie",
+    "cisco",
     "dptech"
   ],
   "license": "MIT",

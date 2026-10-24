@@ -1,14 +1,14 @@
 # dsh-network-engineer · 网络工程师助手
 
-**English** — A DeepSeek Harness plugin that ships a standalone "网络工程师助手" (Network Engineer Assistant) agent preset plus a 32-document command knowledge base for DPtech (迪普), H3C (新华三), Huawei (华为) and Ruijie (锐捷) switches and routers: vendor command reference, cross-vendor translation, routing analysis, screenshot reading, and online manual lookup. The assistant only answers networking topics.
+**English** — A DeepSeek Harness plugin that ships a standalone "网络工程师助手" (Network Engineer Assistant) agent preset plus a 40-document command knowledge base for Cisco (思科), Huawei (华为), H3C (新华三), Ruijie (锐捷) and DPtech (迪普) switches and routers: vendor command reference, cross-vendor translation, routing analysis, screenshot reading, and online manual lookup. The assistant only answers networking topics.
 
 ---
 
 ## 功能
 
 - **预设 Agent「网络工程师助手」**：安装后出现在桌面端/Web 的预设切换器中，选中即用；只回答网络工程主题，其他话题礼貌拒答。
-- **内置知识库（32 篇）**：每厂商 8 主题（系统管理 / VLAN 与二层 / 接口 / 链路聚合 / 静态路由 / OSPF / ACL / 远程管理与诊断），以技能 `network-command-kb` 形式随插件分发，Agent 加载技能后自动获得知识库的安装路径。
-- **四厂商命令对照表 + 路由优先级差异**（华为 preference 体系 vs 锐捷 Cisco AD 体系）内置于 Agent 提示词。
+- **内置知识库（40 篇）**：每厂商 8 主题（系统管理 / VLAN 与二层 / 接口 / 链路聚合 / 静态路由 / OSPF / ACL / 远程管理与诊断），以技能 `network-command-kb` 形式随插件分发，Agent 加载技能后自动获得知识库的安装路径。
+- **五厂商命令对照表 + 路由优先级差异**（华为 preference 体系 vs 锐捷/思科 Cisco AD 体系）内置于 Agent 提示词。
 - **联网查手册**：知识库未覆盖的型号/版本差异自动联网检索官方文档并注明来源；禁止编造命令。
 - **风险标注**：`reboot` / `format` / `erase` / 恢复出厂等高危命令自动附 ⚠️ 风险提示、备份建议与维护窗口提醒。
 
@@ -42,6 +42,7 @@ pnpm dsh plugin install dsh-network-engineer   # 或通过 plugin_manager 的 in
 
 ```
 kb/
+├── cisco/    思科 IOS/IOS XE（8 篇）
 ├── huawei/   华为 VRP（8 篇）
 ├── h3c/      新华三 Comware（8 篇）
 ├── ruijie/   锐捷 RGOS（8 篇）
@@ -65,7 +66,7 @@ dsh-network-engineer/
 ├── cordis.patch.yml     # 插件行 + 「网络工程师助手」预设行（含完整 persona 提示词）
 ├── index.js             # 注册 network-command-kb 技能
 ├── skills/network-command-kb/SKILL.md
-├── kb/                  # 32 篇命令知识库 + README
+├── kb/                  # 40 篇命令知识库 + README
 ├── README.md
 └── LICENSE
 ```
